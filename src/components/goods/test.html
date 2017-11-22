@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		:root{
+			font-size: 60px;
+		}
+		.carte{
+			flex:0 0 1rem;
+			width: 1rem;
+			background: #f3f5f7;
+			overflow: hidden;
+			/* box-sizing: border-box; */
+		}
+		*{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		.carte-item{
+				display: table;
+				height: .4rem;
+				line-height: .4rem;
+				padding:0 .1rem;
+		}
+		.text{
+			display: table-cell;
+			font-size: .1rem;
+			width: .8rem;
+			vertical-align: middle;
+			font-weight: 200;
+			border-bottom: 1px solid rgba(7,17,27,.1);
+		}
+		.current{
+				background-color: white;
+				font-weight: 700;
+				position: relative;
+				margin-top: -1px;
+		}
+		.icon{
+			display: inline-block;
+			width: .24rem;
+			height: .24rem;
+			background-size: cover;
+			vertical-align: top;
+			margin-right: .04rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="goods">
+		<div class="carte">
+			<ul>
+				<li class="carte-item"><span class="text">01</span></li>
+				<li class="carte-item current"><span class="text"><span class="icon"></span>02</span></li>
+				<li class="carte-item"><span class="text"><span class="icon"></span>03</span></li>
+				<li class="carte-item"><span class="text">04</span></li>
+				<li class="carte-item"><span class="text">05</span></li>
+			</ul>
+		</div>
+		<div class="content" ref="content">
+			<!-- <ul>
+				<li v-for="item in goods" class="goods-item list-hook">
+					<span class="title">{{item.name}}</span>
+					<ul>
+						<li v-for="food in item.foods" class="food-item">
+							<img class="img" :src="food.icon"></img>
+							<div class="food-desc">
+								<span class="name">{{food.name}}</span>
+								<span v-if="food.description" class="desc">{{food.description}}</span>
+								<span class="desc">月售{{food.sellCount}}份<span class="rating">好评率{{food.rating}}%</span>
+								</span>
+								<span class="price">
+									<span class="flag">¥</span>{{food.price}}
+									<span v-if="food.oldPrice" class="old-price">
+										<span class="flag">¥</span>{{food.oldPrice}}
+									</span>
+								</span>
+								<div class="btn">
+									<i class="icon iconfont icon-jiahao-copy"></i>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul> -->
+		</div>
+	</div>
+</body>
+</html>
