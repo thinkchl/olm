@@ -18,7 +18,7 @@ const getters ={
 const actions = {
 	//获取商家数据
 	getSeller( { commit,state } ){
-		axios.get('http://localhost:2017/api/seller').then( resp => {
+		axios.get('http://58.64.177.101:2017/api/seller').then( resp => {
 			if( resp.data.errno === 0 ){
 				commit( types.GET_SELLER , resp.data.data )
 			}
